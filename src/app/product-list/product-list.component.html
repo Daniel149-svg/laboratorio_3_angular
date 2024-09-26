@@ -1,0 +1,9 @@
+<h3>lista de productos</h3>
+<ol>
+  <li *ngFor="let product of products">
+    {{ product.name }} - Stock: 
+    <span [ngClass]="{'low-stock': product.stock <= 5}">
+      {{ product.stock }}
+    </span>
+  </li>
+</ol>
